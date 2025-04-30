@@ -12,7 +12,7 @@
     <div class="background">
         <header class="container">
         <div class="logo">Fountain</div>
-        <nav>
+        <nav  id="mobile-nav">
             <ul class="list">
                 <li >
                     <a href="">Home</a>
@@ -36,8 +36,9 @@
                 <button class="btn-login">Login</button>
                 <button class="btn-register">Register</button>
             </div>
-            <div class="bar">
-                <i class="fa-solid fa-bars"></i>
+            <div id="menu-toggle"class="bar">
+                <i class="fa-solid fa-bars" id="open-icon"></i>
+                <i class="fa-solid fa-xmark" id="close-icon" style="display: none;"> </i>
             </div>
         </header>
     
@@ -79,6 +80,6 @@
             </div>
         </div>
     </section>
-    
+    <script src="./index.js"></script>
 </body>
 </html>

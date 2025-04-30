@@ -24,20 +24,24 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 17px;
     background:none;
     box-shadow: 0 0px 5px rgba(0,0,0,0.1);
-}
-
-.bar{
+}.bar{
     display: none;
     position:relative;
     top:5px;
     right:10px;
     font-size : 30px;
+    cursor: pointer;
     z-index: 3;
 } 
+#mobile-nav.active {
+    display: block;
+    font-size : 30px;
+    cursor: pointer;
+    z-index: 3;
+  }
 .logo{
    font-size: clamp(16px, 3.0vw, 26px);
    font-weight: bold;
@@ -86,7 +90,6 @@ nav .list{
     color:orangered;
 }
 .hero{
-   
     color:white;
     text-align: center;
     position:relative;
@@ -124,9 +127,7 @@ nav .list{
     top:420px; 
     left: 50%;
     transform: translateX(-50%);
-    /* margin:0 auto; */
     
-    /* margin:px 0; */
 }
 .services i{
     padding:10px;
@@ -207,15 +208,35 @@ nav .list{
 }
 @media(max-width:900px){
    .background header nav,
-   .background header button {
+   .background header .btn-sign-in {
     display:none;
   
    }
+   
    .bar{
     position: relative;
     display: block;
-    z-index: 99;
+    z-index: 100;
    }
+   nav{
+    position: fixed;
+    right:-100%;
+    top:0;
+    background-color:#003973;
+    width:70%;
+    height: 100vh;
+    padding:25px;
+    z-index:99;
+    transition: all 0.4s ease in;
+  }
+  nav.active{
+    transition: all 0.3s ease-out;
+    right:0;
+  }
+  nav ul{
+    flex-direction: column;
+    gap:60px;
+  }
    .services .service-box{
     flex-wrap:wrap-reverse;
     justify-content: center;
