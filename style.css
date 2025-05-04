@@ -206,7 +206,42 @@ nav .list{
 .item:hover .img_src {
     filter: grayscale(0%);
 }
+.scroll_header_wrapper{
+    position:fixed;
+    right:5rem;
+    top:28rem;
+    z-index: 100;
+}
+.scroll_wrapper{
+    width: 35px;
+    height:35px;
+    background-color: #FF6F28;
+    padding:.6em;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+.scroll_wrapper:hover{
+    transform: scale(1.1);
+    /* rotate: 360deg; */
+}
+.scroll_wrapper:hover .scroll_header i{
+    transform: scale(1.1) rotate(360deg);
+}
+.scroll_header i{
+    transform: scale(1.1) rotate(180deg) ;
+    transition: all 0.2s ease;
+    display: block;
+}
+
 @media(max-width:900px){
+
    .background header nav,
    .background header .btn-sign-in {
     display:none;

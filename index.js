@@ -3,11 +3,11 @@
 
 
 document.addEventListener("DOMContentLoaded", function(){
-    const menuToggole = document.getElementById("menu-toggle");
+    const menuToggle = document.getElementById("menu-toggle");
     const mobileNav = document.getElementById("mobile-nav");
     const openIcon = document.getElementById("open-icon");
     const closeIcon = document.getElementById("close-icon");
-    menuToggole.addEventListener("click", function (){
+    menuToggle.addEventListener("click", function (){
         mobileNav.classList.toggle("active");
         if(mobileNav.classList.contains("active")){
             openIcon.style.display ="none";
@@ -16,5 +16,15 @@ document.addEventListener("DOMContentLoaded", function(){
             openIcon.style.display ="block";
             closeIcon.style.display ="none";
         }
+    });
+// });
+// document.addEventListener("DOMContentLoaded", function(){
+    let scrollButton = document.querySelector("#scroll-button");
+    scrollButton.addEventListener("click", function (event){
+        event.preventDefault();    
+        window.scrollTo({
+          top:0,
+          behavior:"smooth",
+        });
     });
 });
