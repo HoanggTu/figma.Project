@@ -292,12 +292,12 @@ nav .list{
     width: 100%;
     padding-top: 500px;
     bottom: 0px;
-    /* clip-path: polygon(36% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 57%); */
+    clip-path: polygon(36% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 57%);
 }
 .wrapper_img_squareB 
 {
-    /* -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
-    mask-image: linear-gradient(to bottom, transparent 50%, black 50%); */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
+    mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
     position: absolute;
     height: 400px;
     width: 100%;
@@ -306,8 +306,8 @@ nav .list{
     clip-path: circle(43% at 50% 62%);
 
 }
-.imgTop,
-.imgBottom {
+.Top,
+.Bottom {
     background-image: url(./img/content2.png);
     position: absolute;
     background-position: center;
@@ -319,15 +319,15 @@ nav .list{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.imgTop {
+/* .imgTop {
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
-}
-.imgBottom {
+} */
+/* .imgBottom {
     overflow: hidden;
     -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
     mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
-}
+} */
 .wrappertextcontent2 
 {
     display: flex;
@@ -358,11 +358,11 @@ nav .list{
     bottom: -1.2em;
     width: 100%;
     height: 100%;
-    background-image: url(./Vector\ 27.svg);
+    /* background-image: url(./Vector\ 27.svg); */
     background-repeat: no-repeat;
     z-index: -1;
 }
-.textcontent2_description 
+.description 
 {
     font-family:'Poppins',sans-serif;
     font-size:clamp(12px , 2vw, 18px);
@@ -444,7 +444,14 @@ nav .list{
     height: 15rem;
     gap:1rem;
     }
-   
+    .wrapper_content2{
+        flex-wrap: wrap;
+        
+    }
+    .textcontent2_btn{
+        margin: 0 auto;
+    }
+
  }
 @media(max-width:530px){
     .services {
